@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trịnh Quang Trường - Làm Chủ Giọng Nói, Đổi Vận Cuộc Đời</title>
+    
+    <!-- Google Fonts: Montserrat (Font cứng cáp, hiện đại) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C59D5F',       // Vàng thau chủ đạo
+                            dark: '#0F172A',       // Xanh đen (Slate 900) - Style Doanh nhân
+                            darker: '#020617',     // Đen sâu
+                            light: '#F8FAFC',      // Nền sáng (Slate 50)
+                            accent: '#B48A4A',     // Vàng đậm hơn cho hover
+                            red: '#B91C1C'         // Đỏ tươi cho CTA
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'], // Font duy nhất toàn trang
+                    },
+                    animation: {
+                        'marquee': 'marquee 50s linear infinite', 
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }, 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tùy chỉnh thanh cuộn */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #C59D5F; border-radius: 5px; }
+        
+        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Input Form Style */
+        .custom-input {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        .custom-input:focus {
+            background-color: #fff;
+            border-color: #C59D5F;
+            box-shadow: 0 0 0 3px rgba(197, 157, 95, 0.2);
+            outline: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 bg-brand-light antialiased">
+
+    <!-- HEADER (Sticky) -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b-2 border-brand-gold transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-brand-gold rounded flex items-center justify-center text-white font-black text-xl shadow-lg">TQT</div>
+                <div class="hidden lg:block leading-tight">
+                    <span class="block font-bold text-brand-dark text-base tracking-wide uppercase">TRỊNH QUANG TRƯỜNG</span>
+                    <span class="block text-[11px] text-slate-500 font-bold uppercase tracking-[0.2em]">Academy</span>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden lg:flex space-x-8 font-bold text-xs uppercase text-slate-700 tracking-wide">
+                <a href="#cau-chuyen" class="hover:text-brand-gold transition py-2 relative group">
+                    Trịnh Quang Trường là ai?
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#triet-ly" class="hover:text-brand-gold transition py-2 relative group">
+                    Triết lý đào tạo
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#cam-nhan" class="hover:text-brand-gold transition py-2 relative group">
+                    Cảm nhận từ học viên
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="#dang-ky" class="bg-brand-gold hover:bg-brand-accent text-white font-bold py-3 px-8 rounded shadow-lg transition transform hover:scale-105 uppercase text-xs tracking-wider border-b-4 border-[#9a733a]">
+                Tư vấn lộ trình
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-48 pb-40 lg:pt-60 lg:pb-52 min-h-screen flex items-center overflow-hidden bg-brand-dark text-white">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-800 opacity-20 skew-x-12 hidden lg:block pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none z-10"></div>
+
+        <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            
+            <!-- Text Content -->
+            <div class="text-center lg:text-left space-y-12 order-2 lg:order-1">
+                <div class="space-y-8">
+                    <div class="inline-block px-4 py-1.5 border border-brand-gold/50 rounded bg-white/5 backdrop-blur-sm mb-4">
+                        <p class="text-brand-gold font-bold tracking-[0.2em] uppercase text-[10px] lg:text-xs">
+                            Chuyên gia Huấn luyện Giọng nói & Tâm lý
+                        </p>
+                    </div>
+                    
+                    <!-- Tiêu đề chính -->
+                    <div class="font-black leading-tight text-white drop-shadow-xl uppercase tracking-tight">
+                        <h1 class="text-5xl lg:text-6xl mb-4">LÀM CHỦ GIỌNG NÓI</h1>
+                        <h1 class="text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-[#F3E5AB] to-brand-gold">
+                            ĐỔI VẬN CUỘC ĐỜI
+                        </h1>
+                    </div>
+                    
+                    <!-- Dòng ngăn cách -->
+                    <div class="w-24 h-2 bg-brand-gold mx-auto lg:mx-0"></div>
+                </div>
+
+                <p class="text-slate-300 text-lg lg:text-xl font-medium italic border-l-4 border-brand-gold pl-6 py-2 leading-relaxed">
+                    "Tôi không dạy kỹ xảo trình diễn. Tôi cung cấp tấm bản đồ để bạn tìm về nội lực tự thân. Để mỗi lời nói là một lần kiến tạo vị thế và thịnh vượng."
+                </p>
+
+                <div class="pt-10 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                    <a href="#dang-ky" class="inline-block bg-brand-red hover:bg-red-800 text-white font-bold py-4 px-10 rounded shadow-2xl transition transform hover:-translate-y-1 text-base uppercase border-b-4 border-red-900 tracking-wide">
+                        Đăng Ký Tư Vấn Ngay
+                    </a>
+                    <a href="#noi-dau" class="inline-block bg-transparent hover:bg-white/10 text-white font-bold py-4 px-10 rounded border border-white/30 transition text-base uppercase tracking-wide">
+                        Tìm hiểu thêm
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Placeholder (Hero Image - Portrait) -->
+            <div class="relative mx-auto lg:mr-0 w-full max-w-lg order-1 lg:order-2 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold to-brand-accent opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
+                <div class="relative border-2 border-brand-gold/30 bg-slate-900 shadow-2xl overflow-hidden aspect-[3/4]"> 
+                    <!-- IMG-PORTRAIT HERO -->
+                    <img src="img/canhan.jpg" 
+                         alt="Chuyên gia Trịnh Quang Trường" 
+                         class="w-full h-full object-cover transform transition duration-700 hover:scale-105 opacity-90 group-hover:opacity-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PAIN POINTS -->
+    <section id="noi-dau" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-dark mb-6 uppercase tracking-tight">
+                    Bạn Đang Gặp Vấn Đề Gì?
+                </h2>
+                <div class="h-1.5 w-24 bg-brand-gold mx-auto mb-8"></div>
+                <p class="text-slate-600 text-lg font-medium leading-relaxed">
+                    Giọng nói yếu ớt là biểu hiện của nội lực đang tổn thương. <br>Câu chuyện này không chỉ dành cho doanh nhân, mà dành cho bất kỳ ai muốn làm chủ cuộc đời mình.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 hover:shadow-2xl hover:border-brand-gold transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-white rounded flex items-center justify-center text-brand-dark text-3xl mb-6 shadow-md group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-dark uppercase">Lãnh đạo & Chủ DN</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Nói rất tâm huyết nhưng nhân viên thờ ơ. Lời nói trong cuộc họp thiếu uy quyền, phải dùng mệnh lệnh để áp đặt.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 hover:shadow-2xl hover:border-brand-gold transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-white rounded flex items-center justify-center text-brand-dark text-3xl mb-6 shadow-md group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-dark uppercase">Sales & Tư Vấn</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Đánh mất hợp đồng vì chất giọng mỏng, thiếu độ tin cậy. Thường xuyên hụt hơi, khách hàng cảm thấy thiếu chắc chắn.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 hover:shadow-2xl hover:border-brand-gold transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-white rounded flex items-center justify-center text-brand-dark text-3xl mb-6 shadow-md group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-dark uppercase">Gia Đình</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Yêu thương nhưng mở lời là gây tổn thương. Mâu thuẫn vợ chồng, con cái xa cách vì tông giọng gắt gỏng.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-50 p-8 rounded border border-slate-200 hover:shadow-2xl hover:border-brand-gold transition duration-300 group hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-white rounded flex items-center justify-center text-brand-dark text-3xl mb-6 shadow-md group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-hands-holding-circle"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-dark uppercase">Coach & Healer</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Nhà chữa lành nhưng chính mình thiếu năng lượng. Giọng nói chưa đủ độ "tĩnh" và "thấm" để chạm vào học viên.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROFILE & STORY SECTION -->
+    <section id="cau-chuyen" class="py-24 bg-brand-dark text-white overflow-hidden relative">
+        <!-- Background texture -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            
+            <!-- Phần 1: Câu chuyện nghề -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+                <!-- Image Side -->
+                <div class="order-2 lg:order-1 relative group">
+                    <div class="absolute -top-6 -left-6 w-32 h-32 border-t-4 border-l-4 border-brand-gold/50 group-hover:border-brand-gold transition-colors duration-500"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 border-b-4 border-r-4 border-brand-gold/50 group-hover:border-brand-gold transition-colors duration-500"></div>
+                    <!-- IMG-LANDSCAPE (4:3) -->
+                    <img src="img/9.png" 
+                         alt="Câu chuyện nghề" 
+                         class="w-full rounded shadow-2xl grayscale hover:grayscale-0 transition duration-700 aspect-[4/3] object-cover">
+                </div>
+
+                <!-- Text Side -->
+                <div class="order-1 lg:order-2 space-y-8">
+                    <div>
+                        <h4 class="text-brand-gold font-bold uppercase tracking-widest text-xs mb-2">Câu chuyện người làm nghề</h4>
+                        <h2 class="text-3xl lg:text-4xl font-extrabold leading-tight">
+                            20 NĂM ĐI TÌM LỜI GIẢI CHO <br> SỨC MẠNH CỦA ÂM THANH
+                        </h2>
+                    </div>
+                    
+                    <div class="text-slate-300 space-y-4 text-justify text-base leading-relaxed">
+                        <p>
+                            Suốt 20 năm làm nghề, đứng sau cánh gà của những sân khấu lớn, tôi đã chứng kiến những <strong>"khoảng tối"</strong> đầy nghịch lý không chỉ của những Doanh nhân tài ba thất bại khi gọi vốn vì giọng nói run rẩy, mà còn là nỗi đau của rất nhiều số phận khác.
+                        </p>
+                        <p>
+                            Tôi thấy những người <strong>Sales</strong> tuột mất hợp đồng tiền tỷ chỉ vì giọng nói thiếu sức nặng niềm tin. Tôi thấy những người làm <strong>Coach/Healer</strong> đi chữa lành cho người khác nhưng chính mình lại cạn kiệt năng lượng khi cất lời. Và đau lòng hơn, tôi thấy những mái ấm <strong>Gia đình</strong> rạn nứt không phải vì hết yêu, mà vì những tổn thương gây ra bởi lời nói vô tình, gắt gỏng.
+                        </p>
+                        <p>
+                            Tất cả họ đều đang cố tìm cách sửa "bề mặt", học nhấn nhá kỹ thuật, nhưng tâm trí vẫn đầy ắp nỗi sợ và sự bất ổn.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border-l-4 border-brand-gold p-6">
+                        <p class="text-white font-semibold italic text-lg">
+                            "Tôi nhận ra: Giọng nói là bản đồ sinh học. Muốn sửa tiếng, phải sửa người."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phần 2: Hồ Sơ Chuyên Gia -->
+            <div class="bg-slate-900/50 border border-slate-700 rounded-xl p-8 lg:p-12">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <!-- Bio Text -->
+                    <div class="lg:col-span-8 space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-extrabold text-white mb-2 uppercase">TRỊNH QUANG TRƯỜNG</h3>
+                            <p class="text-brand-gold font-bold text-sm tracking-widest uppercase">Chuyên gia Huấn luyện Giọng nói & Kỹ năng</p>
+                        </div>
+                        
+                        <p class="text-slate-300 leading-relaxed italic border-l-2 border-brand-gold/30 pl-4">
+                            "Trịnh Quang Trường, một người đam mê giọng nói, nghệ thuật giao tiếp và thanh nhạc. Với hơn 20 năm kinh nghiệm trong lĩnh vực đào tạo giọng nói, kỹ năng giao tiếp và thanh nhạc, tôi đã đồng hành cùng hàng ngàn học viên, giúp họ cải thiện giọng nói, phong cách trình bày và kỹ năng biểu diễn để tự tin hơn trong cuộc sống và công việc."
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-8 pt-4">
+                            <!-- Cột Chuyên Môn -->
+                            <div>
+                                <h4 class="text-white font-bold uppercase mb-6 border-b-2 border-brand-gold pb-2 inline-block">Chuyên môn & Kinh nghiệm</h4>
+                                <ul class="space-y-4 text-sm text-slate-400">
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check-circle text-brand-gold mt-1 shrink-0"></i>
+                                        <span><b>Hơn 20 năm kinh nghiệm</b> trong giảng dạy và đào tạo giọng nói, thanh nhạc, kỹ năng giao tiếp.</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check-circle text-brand-gold mt-1 shrink-0"></i>
+                                        <span><b>Tốt nghiệp Cử nhân</b> Quản lý Văn hóa chuyên ngành Thanh nhạc & Giọng nói tại ĐH Văn hóa Nghệ thuật Quân đội.</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check-circle text-brand-gold mt-1 shrink-0"></i>
+                                        <span><b>MC chuyên nghiệp</b> – từng dẫn dắt nhiều chương trình lớn, đặc biệt là "Chúng Tôi Là Chiến Sĩ" trên VTV3.</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check-circle text-brand-gold mt-1 shrink-0"></i>
+                                        <span><b>Tổng đạo diễn</b> và ban tổ chức nhiều sự kiện văn hóa nghệ thuật lớn của Tổng cục Chính trị.</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check-circle text-brand-gold mt-1 shrink-0"></i>
+                                        <span><b>Giám đốc sự kiện</b> công ty CP truyền thông GTO.</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check-circle text-brand-gold mt-1 shrink-0"></i>
+                                        <span><b>Trực tiếp đào tạo hơn 1.000 học viên</b> bao gồm doanh nhân, MC, giáo viên, diễn giả...</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Cột Giá Trị -->
+                            <div>
+                                <h4 class="text-white font-bold uppercase mb-6 border-b-2 border-brand-gold pb-2 inline-block">Sứ mệnh & Giá trị</h4>
+                                <p class="text-sm text-slate-400 mb-4">Tôi tin rằng giọng nói chính là “chìa khóa vàng” mở ra cánh cửa thành công trong cuộc sống và sự nghiệp.</p>
+                                <ul class="space-y-3 text-sm text-slate-300 font-medium">
+                                    <li class="flex items-center gap-2"><i class="fas fa-star text-brand-gold text-xs"></i> Phát triển giọng nói trầm ấm, rõ ràng, truyền cảm.</li>
+                                    <li class="flex items-center gap-2"><i class="fas fa-star text-brand-gold text-xs"></i> Rèn luyện phong cách giao tiếp chuyên nghiệp và tự tin.</li>
+                                    <li class="flex items-center gap-2"><i class="fas fa-star text-brand-gold text-xs"></i> Học cách kiểm soát hơi thở, âm điệu để truyền đạt thông điệp hiệu quả.</li>
+                                    <li class="flex items-center gap-2"><i class="fas fa-star text-brand-gold text-xs"></i> Tận dụng giọng nói để xây dựng thương hiệu cá nhân.</li>
+                                    <li class="flex items-center gap-2"><i class="fas fa-star text-brand-gold text-xs"></i> Cải thiện giọng hát, phong thái biểu diễn.</li>
+                                </ul>
+                                
+                                <!-- Câu chốt Sứ mệnh: Căn trái -->
+                                <div class="mt-8 p-5 bg-brand-gold/10 border border-brand-gold rounded text-left">
+                                    <p class="text-brand-gold font-extrabold uppercase text-xs leading-relaxed tracking-wide">
+                                        "HƯỚNG TỚI MỤC TIÊU CUỐI CÙNG LÀ GIÚP MỌI NGƯỜI CÓ THỂ ĐỔI VẬN CUỘC ĐỜI TỪ GIỌNG NÓI"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Image -->
+                    <div class="lg:col-span-4 flex items-center justify-center">
+                        <div class="relative w-full h-full min-h-[300px] border-2 border-brand-gold/20 rounded overflow-hidden shadow-2xl">
+                             <!-- IMG-PORTRAIT -->
+                            <img src="img/giaithuong.jpg" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. PHILOSOPHY SECTION -->
+    <section id="triet-ly" class="py-24 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-dark uppercase mb-2">Triết Lý Kiềng 3 Chân</h2>
+                <div class="h-1.5 w-20 bg-brand-gold mx-auto mb-6 rounded-full"></div>
+                <p class="text-xl text-slate-600 italic font-medium max-w-2xl mx-auto">
+                    "Sửa giọng là sửa thói quen. Sửa thói quen là sửa tính cách. Tính cách đổi thì số phận đổi."
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Col 1 -->
+                <div class="bg-white p-10 rounded border-t-4 border-brand-dark hover:border-brand-gold shadow-lg transition duration-300 group hover:-translate-y-2">
+                    <div class="mb-8 flex justify-center">
+                        <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-300">
+                            <i class="fas fa-lungs text-4xl text-brand-dark group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-center font-bold text-xl text-brand-dark mb-2 uppercase">SỬA GIỌNG</h3>
+                    <p class="text-center text-[10px] font-bold text-slate-400 uppercase mb-6 tracking-widest">Góc nhìn Khoa học</p>
+                    <div class="space-y-4 text-sm">
+                        <p class="text-slate-500 bg-red-50 p-3 rounded"><strong class="text-brand-red">Loại bỏ tư duy:</strong> Giọng hay do trời phú.</p>
+                        <p class="text-slate-700 bg-slate-50 p-3 rounded border-l-4 border-brand-gold"><strong class="text-brand-gold">Chân lý TQT:</strong> Giọng nói là Vật lý học. Uy lực phải phát ra từ cơ thể được nắn chỉnh đúng cấu trúc (Cột hơi, Xương sống).</p>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="bg-white p-10 rounded border-t-4 border-brand-gold shadow-2xl relative transform md:-translate-y-6 z-10 group">
+                    <div class="mb-8 flex justify-center">
+                        <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-300">
+                            <i class="fas fa-brain text-4xl text-brand-dark group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-center font-bold text-xl text-brand-dark mb-2 uppercase">SỬA TÂM</h3>
+                    <p class="text-center text-[10px] font-bold text-slate-400 uppercase mb-6 tracking-widest">Góc nhìn Tâm lý</p>
+                    <div class="space-y-4 text-sm">
+                        <p class="text-slate-500 bg-red-50 p-3 rounded"><strong class="text-brand-red">Loại bỏ tư duy:</strong> Run rẩy do thiếu kỹ năng.</p>
+                        <p class="text-slate-700 bg-slate-50 p-3 rounded border-l-4 border-brand-gold"><strong class="text-brand-gold">Chân lý TQT:</strong> Đó là "tín hiệu cầu cứu" của tiềm thức. Sửa giọng là trị liệu tâm lý sâu, gỡ bỏ nút thắt nỗi sợ.</p>
+                    </div>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="bg-white p-10 rounded border-t-4 border-brand-dark hover:border-brand-gold shadow-lg transition duration-300 group hover:-translate-y-2">
+                    <div class="mb-8 flex justify-center">
+                        <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-300">
+                            <i class="fas fa-atom text-4xl text-brand-dark group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-center font-bold text-xl text-brand-dark mb-2 uppercase">SỬA VẬN</h3>
+                    <p class="text-center text-[10px] font-bold text-slate-400 uppercase mb-6 tracking-widest">Góc nhìn Năng lượng</p>
+                    <div class="space-y-4 text-sm">
+                        <p class="text-slate-500 bg-red-50 p-3 rounded"><strong class="text-brand-red">Loại bỏ tư duy:</strong> Chỉ là công cụ truyền tin.</p>
+                        <p class="text-slate-700 bg-slate-50 p-3 rounded border-l-4 border-brand-gold"><strong class="text-brand-gold">Chân lý TQT:</strong> "Đồng thanh tương ứng". Giọng vang rền, chính trực sẽ kiến tạo trường năng lượng dương, thu hút tài lộc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CODE OF HONOR -->
+    <section class="py-24 bg-brand-dark text-white border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <!-- Title & Image Side -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h2 class="text-4xl font-extrabold uppercase leading-tight mb-4">
+                            Nguyên Tắc <br> <span class="text-brand-gold">Bất Biến</span>
+                        </h2>
+                        <p class="text-slate-400 text-lg">Những giá trị cốt lõi tạo nên sự khác biệt và uy tín của TQT Academy.</p>
+                    </div>
+                    
+                    <!-- SMALL IMAGE ADDED (5:3 Ratio) -->
+                    <div class="relative w-full max-w-sm rounded-lg overflow-hidden border-2 border-brand-gold/20 group shadow-lg">
+                        <img src="https://placehold.co/500x300/111/C59D5F?text=GIA+TRI+COT+LOI\n(Ty+Le+5:3)&font=montserrat" 
+                             alt="Giá trị cốt lõi" 
+                             class="w-full object-cover hover:scale-105 transition duration-500 aspect-[5/3] opacity-80 group-hover:opacity-100">
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="lg:col-span-7 grid gap-6">
+                    <div class="bg-white/5 border-l-4 border-brand-gold p-8 rounded-r hover:bg-white/10 transition group">
+                        <h3 class="font-bold text-xl mb-2 uppercase text-white group-hover:text-brand-gold transition">1. Chuyển hóa gốc rễ - Nói KHÔNG với mẹo vặt</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Từ chối dạy kỹ xảo bề mặt (Tips & Tricks). Tập trung nắn chỉnh cấu trúc cơ thể và trị liệu tâm thức để tạo thay đổi bền vững từ bên trong.</p>
+                    </div>
+                    <div class="bg-white/5 border-l-4 border-brand-gold p-8 rounded-r hover:bg-white/10 transition group">
+                        <h3 class="font-bold text-xl mb-2 uppercase text-white group-hover:text-brand-gold transition">2. Khoa học thực chứng - Nói KHÔNG với mê tín</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Mọi phương pháp "Sửa Vận" phải dựa trên Khoa học thần kinh, Vật lý âm thanh và Tâm lý học. Tuyệt đối không ảo tưởng hóa/thần thánh hóa giọng nói.</p>
+                    </div>
+                    <div class="bg-white/5 border-l-4 border-brand-gold p-8 rounded-r hover:bg-white/10 transition group">
+                        <h3 class="font-bold text-xl mb-2 uppercase text-white group-hover:text-brand-gold transition">3. Làm chủ giọng nói - Kiến tạo vận mệnh</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Đích đến không phải là dạy nói hay, mà là giúp học viên làm chủ năng lượng và lời nói để tự mình thay đổi vị thế và nắm giữ vận mệnh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CAREER JOURNEY (Updated Header Style) -->
+    <section class="py-20 bg-black overflow-hidden relative border-y border-slate-800">
+        <div class="container mx-auto px-4 mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
+            <div>
+                <!-- TIÊU ĐỀ LỚN & GRADIENT GOLD -->
+                <h3 class="text-4xl lg:text-5xl uppercase font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-[#F3E5AB] to-brand-gold mb-2 drop-shadow-sm">
+                    Hành Trình Sự Nghiệp
+                </h3>
+                <p class="text-slate-500 text-base mt-2 tracking-wide font-medium">20 năm đồng hành cùng Tinh hoa & Nghệ thuật</p>
+            </div>
+            <div class="hidden md:block w-32 h-[2px] bg-brand-gold mb-2"></div>
+        </div>
+
+        <!-- Marquee Wrapper -->
+        <div class="relative w-full flex overflow-hidden group">
+            <div class="flex animate-marquee group-hover:[animation-play-state:paused] gap-6 px-4">
+                <!-- Set 1 (10 Ảnh - Tỉ lệ 4:3 Ngang - 400x300) -->
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/1.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/2.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/11.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/5.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/6.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <!-- Duplicate for Loop -->
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/9.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/7.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/8.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/1.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+                <div class="w-[400px] h-[300px] bg-slate-900 border border-slate-800 shrink-0 overflow-hidden rounded relative">
+                    <img src="img/3.png" class="w-full h-full object-cover filter grayscale hover:filter-none transition duration-500 opacity-80 hover:opacity-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TRAINING ORIENTATION -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold text-brand-dark uppercase">Định Hướng Đào Tạo</h2>
+                <p class="text-slate-500 mt-4 text-lg font-light">Lựa chọn con đường phù hợp để tái thiết lập vị thế</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Option 1 -->
+                <div class="bg-slate-50 p-10 rounded border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="text-brand-gold text-xs font-extrabold uppercase tracking-widest mb-6">Online Training</div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4">ĐÁNH THỨC GIỌNG NÓI</h3>
+                    <p class="text-slate-600 text-sm mb-8 flex-1 leading-relaxed">Giải pháp nền tảng giúp sửa lỗi phát âm, giọng địa phương và xây dựng cột hơi khỏe khoắn ngay tại nhà.</p>
+                    <a href="#dang-ky" onclick="selectOption('Đánh Thức Giọng Nói')" class="text-brand-dark font-bold text-sm uppercase tracking-wide border-b-2 border-brand-gold pb-1 inline-block hover:text-brand-gold w-fit transition-colors">Đăng ký tư vấn <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- Option 2 (Highlight) -->
+                <div class="bg-brand-dark p-10 rounded border border-brand-dark shadow-2xl relative transform lg:-translate-y-6 flex flex-col group">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-brand-dark text-[10px] font-bold px-4 py-1.5 uppercase rounded-bl">Chuyển hóa</div>
+                    <div class="text-brand-gold text-xs font-extrabold uppercase tracking-widest mb-6">Offline Camp</div>
+                    <h3 class="text-2xl font-bold text-white mb-6 uppercase leading-tight">Làm Chủ Giọng Nói - Đổi Vận Cuộc Đời</h3>
+                    <p class="text-slate-400 text-sm mb-8 flex-1 leading-relaxed">Trại huấn luyện tập trung cường độ cao. Nơi bạn phá vỡ vỏ bọc, kết nối năng lượng đám đông và "lột xác" hoàn toàn.</p>
+                    <a href="#dang-ky" onclick="selectOption('Trại Huấn Luyện (Offline)')" class="w-full bg-brand-gold text-brand-dark font-bold text-center py-4 rounded uppercase hover:bg-white transition text-sm tracking-wide">Đăng ký tư vấn</a>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="bg-slate-50 p-10 rounded border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+                    <div class="text-brand-gold text-xs font-extrabold uppercase tracking-widest mb-6">Private Coaching</div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4">VỊ THẾ LÃNH ĐẠO (1:1)</h3>
+                    <p class="text-slate-600 text-sm mb-8 flex-1 leading-relaxed">Chương trình may đo riêng biệt cho Doanh nhân & Chính khách. Bảo mật tuyệt đối. Đồng hành trọn đời.</p>
+                    <a href="#dang-ky" onclick="selectOption('Coaching 1:1 Lãnh Đạo')" class="text-brand-dark font-bold text-sm uppercase tracking-wide border-b-2 border-brand-gold pb-1 inline-block hover:text-brand-gold w-fit transition-colors">Đăng ký tư vấn <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS -->
+    <section id="cam-nhan" class="py-24 bg-brand-dark text-white border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold uppercase mb-4">Cảm Nhận Từ Học Viên</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto"></div>
+            </div>
+
+            <!-- Video Embed -->
+            <div class="max-w-4xl mx-auto mb-20 shadow-2xl border border-slate-700 rounded-xl overflow-hidden bg-black">
+                <div class="aspect-w-16 aspect-h-9 relative" style="padding-bottom: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/7qniN6q3W0g?si=QPKLwZlafuq5MDYd" title="Chia sẻ học viên TQT Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Review Grid -->
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 text-center relative mt-12 hover:bg-slate-800 transition group">
+                    <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-brand-gold absolute -top-12 left-1/2 transform -translate-x-1/2 shadow-lg bg-slate-900 group-hover:scale-110 transition duration-300">
+                        <img src="https://placehold.co/150x150/222/C59D5F?text=HV1" alt="Anh Minh Tuấn" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-12">
+                        <p class="text-slate-300 italic text-sm mb-6 leading-relaxed">"Từ người sợ họp giao ban, giờ tôi là người truyền lửa cho cả công ty. Nhân viên lắng nghe và tôn trọng tôi hơn."</p>
+                        <h4 class="text-brand-gold font-bold text-lg uppercase">Anh Minh Tuấn</h4>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 block">Chủ Doanh Nghiệp</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 text-center relative mt-12 hover:bg-slate-800 transition group">
+                    <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-brand-gold absolute -top-12 left-1/2 transform -translate-x-1/2 shadow-lg bg-slate-900 group-hover:scale-110 transition duration-300">
+                        <img src="https://placehold.co/150x150/222/C59D5F?text=HV2" alt="Chị Lan Anh" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-12">
+                        <p class="text-slate-300 italic text-sm mb-6 leading-relaxed">"Khách hàng tin tưởng tôi hơn hẳn nhờ giọng nói trầm ấm. Tỷ lệ chốt deal tăng lên rõ rệt chỉ sau 1 tháng."</p>
+                        <h4 class="text-brand-gold font-bold text-lg uppercase">Chị Lan Anh</h4>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 block">Sales Bất Động Sản</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 text-center relative mt-12 hover:bg-slate-800 transition group">
+                    <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-brand-gold absolute -top-12 left-1/2 transform -translate-x-1/2 shadow-lg bg-slate-900 group-hover:scale-110 transition duration-300">
+                        <img src="https://placehold.co/150x150/222/C59D5F?text=HV3" alt="Chị Thu Thủy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-12">
+                        <p class="text-slate-300 italic text-sm mb-6 leading-relaxed">"Tôi đã thôi gắt gỏng với con. Không khí gia đình nhẹ nhàng hơn, chồng tôi cũng chia sẻ nhiều hơn."</p>
+                        <h4 class="text-brand-gold font-bold text-lg uppercase">Chị Thu Thủy</h4>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 block">Nội Trợ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FORM SECTION -->
+    <section id="dang-ky" class="py-24 bg-brand-dark relative border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-slate-900 rounded-lg shadow-2xl border border-slate-700 overflow-hidden">
+                
+                <!-- Form Header -->
+                <div class="bg-brand-gold p-10 text-center relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-extrabold text-white uppercase drop-shadow-md">ĐĂNG KÝ TƯ VẤN KHÓA HỌC</h2>
+                        <p class="text-white/90 text-sm mt-2 font-medium">Để lại thông tin, Thầy Trịnh Quang Trường sẽ trực tiếp lên lộ trình cho bạn.</p>
+                    </div>
+                </div>
+
+                <div class="p-8 md:p-12">
+                    <!-- Countdown -->
+                    <div class="flex justify-center gap-4 mb-10">
+                        <div class="text-center">
+                            <div class="bg-slate-800 w-16 h-16 flex items-center justify-center rounded-lg text-3xl font-bold text-white border border-slate-700" id="hours">26</div>
+                            <span class="text-[10px] text-slate-500 mt-2 block uppercase tracking-widest font-bold">Giờ</span>
+                        </div>
+                        <div class="text-3xl font-bold text-brand-gold self-center -mt-6">:</div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 w-16 h-16 flex items-center justify-center rounded-lg text-3xl font-bold text-white border border-slate-700" id="minutes">59</div>
+                            <span class="text-[10px] text-slate-500 mt-2 block uppercase tracking-widest font-bold">Phút</span>
+                        </div>
+                        <div class="text-3xl font-bold text-brand-gold self-center -mt-6">:</div>
+                        <div class="text-center">
+                            <div class="bg-slate-800 w-16 h-16 flex items-center justify-center rounded-lg text-3xl font-bold text-brand-red border border-slate-700" id="seconds">55</div>
+                            <span class="text-[10px] text-slate-500 mt-2 block uppercase tracking-widest font-bold">Giây</span>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <form name="submit-to-google-sheet" id="consultForm" class="space-y-6">
+                        <input type="hidden" name="Nguồn" value="Landing-V6-Montserrat">
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase ml-1">Họ và Tên <span class="text-brand-red">*</span></label>
+                                <input type="text" name="Họ và tên" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full bg-slate-800 border border-slate-700 rounded p-4 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-slate-600 text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase ml-1">Công việc hiện tại</label>
+                                <input type="text" name="Công việc" placeholder="Ví dụ: Sale, CEO..." class="w-full bg-slate-800 border border-slate-700 rounded p-4 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-slate-600 text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase ml-1">Số điện thoại (Zalo) <span class="text-brand-red">*</span></label>
+                                <input type="tel" name="Số điện thoại" required placeholder="Nhập SĐT..." class="w-full bg-slate-800 border border-slate-700 rounded p-4 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-slate-600 text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase ml-1">Email cá nhân <span class="text-brand-red">*</span></label>
+                                <input type="email" name="Email" required placeholder="Nhập Email..." class="w-full bg-slate-800 border border-slate-700 rounded p-4 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-slate-600 text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Form Field Hidden (Khóa học) -->
+                        <div class="space-y-2 hidden">
+                            <label class="text-xs font-bold text-slate-400 uppercase ml-1">Bạn quan tâm khóa học nào? <span class="text-brand-red">*</span></label>
+                            <div class="relative">
+                                <select id="service-select" name="Khóa học" class="w-full bg-slate-800 border border-slate-700 rounded p-4 text-white focus:outline-none focus:border-brand-gold transition-colors appearance-none text-sm cursor-pointer">
+                                    <option value="Tư vấn chung" selected>Tư vấn chung</option>
+                                    <option value="Khóa Nâng Cao (Online)">Đánh Thức Giọng Nói (Online)</option>
+                                    <option value="Khóa Chuyên Sâu (Offline)">Trại Huấn Luyện (Offline)</option>
+                                    <option value="Coaching 1:1">Private Coaching 1:1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-slate-400 uppercase ml-1">Mong muốn của bạn? <span class="text-brand-red">*</span></label>
+                            <textarea name="Mong muốn" rows="3" required placeholder="Ví dụ: Muốn sửa giọng ngọng, giọng yếu..." class="w-full bg-slate-800 border border-slate-700 rounded p-4 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-slate-600 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" id="btn-submit" class="w-full bg-brand-red hover:bg-red-700 text-white font-bold text-xl py-5 rounded shadow-lg uppercase tracking-wider transition-all duration-300 mt-6 transform hover:scale-[1.01] border-b-4 border-red-900">
+                            ĐĂNG KÝ NGAY
+                        </button>
+                    </form>
+                    
+                     <!-- Success Message -->
+                     <div id="msg-success" class="hidden mt-6 p-4 bg-green-900/30 border border-green-500/30 text-green-400 text-center rounded">
+                        <i class="fa-solid fa-check-circle mr-2"></i> Đăng ký thành công! Chúng tôi sẽ liên hệ sớm nhất.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-slate-800 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-white/5 rounded flex items-center justify-center text-brand-gold font-black text-2xl mb-6 border-2 border-brand-gold/30">TQT</div>
+                
+                <h3 class="text-brand-gold font-bold uppercase tracking-[0.2em] mb-2 text-xl">
+                    TRỊNH QUANG TRƯỜNG ACADEMY
+                </h3>
+                <p class="text-slate-400 text-sm mb-6 italic font-medium">"Sửa Giọng Là Sửa Mình - Kiến Tạo Cuộc Đời Mới"</p>
+                
+                <div class="inline-block border border-brand-gold/30 px-10 py-3 rounded mb-10 bg-white/5">
+                    <p class="text-white text-lg font-bold">Hotline / Zalo hỗ trợ: <span class="text-brand-gold">032 965 9468</span></p>
+                </div>
+                
+                <div class="flex justify-center gap-8 mb-8">
+                    <a href="#" class="text-slate-600 hover:text-brand-gold transition transform hover:scale-110"><i class="fa-brands fa-facebook-f text-2xl"></i></a>
+                    <a href="#" class="text-slate-600 hover:text-brand-gold transition transform hover:scale-110"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+                    <a href="#" class="text-slate-600 hover:text-brand-gold transition transform hover:scale-110"><i class="fa-brands fa-youtube text-2xl"></i></a>
+                </div>
+                
+                <p class="text-slate-700 text-xs uppercase tracking-wide">© 2026 Trịnh Quang Trường. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // 1. Logic chọn option từ các nút bấm
+        function selectOption(val) {
+            const select = document.getElementById('service-select');
+            if(select) {
+                select.value = val;
+                // Scroll to form
+                document.getElementById('dang-ky').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // 2. Countdown Logic
+        const totalSeconds = 27 * 60 * 60; 
+        let remainingTime = totalSeconds;
+
+        function updateCountdown() {
+            const hours = Math.floor(remainingTime / 3600);
+            const minutes = Math.floor((remainingTime % 3600) / 60);
+            const seconds = remainingTime % 60;
+
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+
+            if (remainingTime > 0) {
+                remainingTime--;
+            }
+        }
+        setInterval(updateCountdown, 1000);
+
+        // 3. Google Sheets Submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGwDwteQ8P-y6B4O4hu3s2t-9LfCzFyIvdzM1SjbrHAkaGer0iiqai4qsvEUH_owUhhg/exec'; 
+        const form = document.forms['submit-to-google-sheet'];
+        const msgBox = document.getElementById("msg-success");
+        const btn = document.getElementById("btn-submit");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const originalBtnText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> ĐANG XỬ LÝ...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msgBox.classList.remove('hidden');
+                    btn.innerHTML = "ĐÃ ĐĂNG KÝ XONG";
+                    form.reset();
+                    setTimeout(() => { 
+                        msgBox.classList.add('hidden'); 
+                        btn.innerHTML = originalBtnText;
+                        btn.disabled = false;
+                        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    }, 5000);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert("Lỗi kết nối! Vui lòng thử lại.");
+                    btn.innerHTML = originalBtnText;
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                });
+        });
+    </script>
+</body>
+</html>
